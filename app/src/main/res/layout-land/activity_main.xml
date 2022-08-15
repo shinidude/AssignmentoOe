@@ -24,7 +24,6 @@
             android:src="@drawable/img_banner_text"
             android:scaleType="fitXY">
             </ImageView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +32,6 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@color/black">
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

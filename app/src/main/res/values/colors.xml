@@ -5,6 +5,13 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+    <!--Colors that is used in this assignment -->
+    <color name="red">#D40100</color>
+    <color name="dark_red">#BE0403</color>
+    <color name="yellow">#FAA61A</color>
+    <color name="dark_yellow">#E69817</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
+

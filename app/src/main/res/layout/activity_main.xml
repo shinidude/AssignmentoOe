@@ -4,27 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <ImageView
-            android:id="@+id/banner"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/img_banner_img"
-            android:scaleType="fitXY">
-        </ImageView>
+            android:layout_height="0dp"
+            android:layout_weight="0.75">
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_banner_img"
+                android:scaleType="fitXY"
+                android:tint="#88333333"
+                >
+            </ImageView>
 
-        <ImageView
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_banner_text"
+                android:scaleType="fitXY">
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/img_banner_text"
-            android:scaleType="fitXY">
-        </ImageView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:background="@color/red">
+        </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,4 +41,6 @@
         android:layout_weight="1"
         android:background="@color/black">
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </LinearLayout>
