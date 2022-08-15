@@ -61,14 +61,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/img_tile_cs"></ImageView>
+                android:src="@drawable/img_tile_cs"
+                android:onClick="cs_subButton"></ImageView>
 
             <ImageView
                 android:id="@+id/tile_math"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/img_tile_math"></ImageView>
+                android:src="@drawable/img_tile_math"
+                android:onClick="math_subButton"></ImageView>
         </LinearLayout>
 
         <LinearLayout
@@ -82,14 +84,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/img_tile_design"></ImageView>
+                android:src="@drawable/img_tile_design"
+                android:onClick="design_subButton"></ImageView>
 
             <ImageView
                 android:id="@+id/tile_se"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/img_tile_se"></ImageView>
+                android:src="@drawable/img_tile_se"
+                android:onClick="se_subButton"></ImageView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
