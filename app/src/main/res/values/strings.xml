@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Waikato University - SCMS</string>
+    <string name="title_placeholder">Title</string>
+    <string name="content_placeholder">Content</string>
 </resources>

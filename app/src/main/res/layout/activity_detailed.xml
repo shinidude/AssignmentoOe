@@ -12,14 +12,20 @@
         android:layout_weight="0.82"
         android:background="@color/yellow"
         >
-
+        <ImageView
+            android:id="@+id/detail_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop">
+        </ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.18"
-        android:background="@color/red"></LinearLayout>
+        android:background="@color/red"
+        ></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,16 +40,18 @@
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:gravity="center"
-            android:text="Title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"></TextView>
+            android:text="@string/title_placeholder"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            ></TextView>
 
         <TextView
             android:id="@+id/detail_content_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Content"
-            android:textColor="#6a6a6a"></TextView>
+            android:layout_margin="25dp"
+            android:text="@string/content_placeholder"
+            android:textColor="#6a6a6a"
+            ></TextView>
 
     </LinearLayout>
 </LinearLayout>

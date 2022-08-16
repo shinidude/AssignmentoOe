@@ -6,16 +6,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
+        <!--A linear layout for the banner and the red divider
+        to appear vertically on landscape-->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <!--Putting the text image over the banner image using a
+            constraint layout-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.8">
+                android:layout_weight="0.82">
 
                 <ImageView
                     android:id="@+id/banner"
@@ -23,15 +27,18 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_banner_img"
-                    android:tint="#BB333333"></ImageView>
+                    android:tint="#BB333333"
+                    ></ImageView>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_banner_text"></ImageView>.
+                    android:src="@drawable/img_banner_text"
+                    ></ImageView>.
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!--This is the red rectangle divider-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -42,7 +49,8 @@
             </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
+    <!--Utilised linear layout to be able
+    to locate two tiles right next to each other horizontally -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -56,44 +64,55 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/title_cs"
+            <ImageButton
+                android:id="@+id/tile_cs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/img_tile_cs"
-                android:onClick="cs_subButton"></ImageView>
+                android:background="@color/black"
+                android:scaleType="fitXY"></ImageButton>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/tile_math"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/img_tile_math"
-                android:onClick="math_subButton"></ImageView>
+                android:background="@color/black"
+                android:scaleType="fitXY"></ImageButton>
         </LinearLayout>
 
+        <!--Utilised linear layout to be able
+         to locate two tiles right next to each other horizontally -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/tile_design"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/img_tile_design"
-                android:onClick="design_subButton"></ImageView>
+                android:background="@color/black"
+                android:scaleType="fitXY"
+                ></ImageButton>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/tile_se"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/img_tile_se"
-                android:onClick="se_subButton"></ImageView>
+                android:background="@color/black"
+                android:scaleType="fitXY"
+                ></ImageButton>
+
         </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

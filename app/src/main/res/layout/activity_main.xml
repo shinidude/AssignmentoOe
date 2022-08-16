@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,8 +17,7 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/img_banner_img"
                 android:scaleType="fitXY"
-                android:tint="#88333333"
-                >
+                android:tint="#88333333">
             </ImageView>
 
             <ImageView
@@ -49,21 +49,25 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/title_cs"
+                <ImageButton
+                    android:id="@+id/tile_cs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_tile_cs"
-                    android:onClick="cs_subButton"></ImageView>
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"></ImageButton>
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/tile_design"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_tile_design"
-                    android:onClick="design_subButton"></ImageView>
+                    tools:ignore="SpeakableTextPresentCheck"></ImageButton>
             </LinearLayout>
 
             <LinearLayout
@@ -72,21 +76,25 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/tile_math"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_tile_math"
-                    android:onClick="math_subButton"></ImageView>
+                    tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/tile_se"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_tile_se"
-                    android:onClick="se_subButton"></ImageView>
+                    tools:ignore="SpeakableTextPresentCheck"></ImageButton>
             </LinearLayout>
         </LinearLayout>
 
