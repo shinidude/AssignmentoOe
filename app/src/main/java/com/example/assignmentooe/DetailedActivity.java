@@ -4,15 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent; //Intend is imported to be able to use the intent class
 
 
 public class DetailedActivity extends AppCompatActivity {
-
+    //Declaring variables
     TextView TITLE, CONTENT;
     int val;
 
@@ -21,25 +19,19 @@ public class DetailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
 
-        TITLE=findViewById(R.id.content_title_id);
-        CONTENT=findViewById(R.id.detail_content_id);
-        ImageView banner = (ImageView) findViewById(R.id.detail_banner);
+        TITLE=findViewById(R.id.content_title_id);//passing the title textview in xml to be able to access in java
+        CONTENT=findViewById(R.id.detail_content_id);//passing the content textview in xml to be able to access in java
+        ImageView banner = (ImageView) findViewById(R.id.detail_banner);//passing the image in the detailed activity in xml to be able to access in java
 
-        Intent intent = getIntent();
-        String title = intent.getStringExtra("TITLE");
-        String content = intent.getStringExtra("CONTENT");
-        Bundle b= getIntent().getExtras();
+        Intent intent = getIntent();//Accessing the intent
+        String title = intent.getStringExtra("TITLE");//getting the "TITLE" data and passing it into title
+        String content = intent.getStringExtra("CONTENT");//getting the "CONTENT" data and passing it into content
 
-        if (b != null) {
-            val = b.getInt("BANNER");
-        }
-        banner.setImageResource(val);
+        TITLE.setText(title);//the text in the TITLE textview will be changed into the value in title
+        CONTENT.setText(content);//the text in the CONTENT textview will be changed into the value in content
 
-        TITLE.setText(title);
-        CONTENT.setText(content);
-
-
+        Bundle b= getIntent().getExtras();//check if any value sent from previous activity
+        val = b.getInt("BANNER");//get the image value
+        banner.setImageResource(val);//Set the banner using the image value
     }
-
-
 }

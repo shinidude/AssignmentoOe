@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Linear lay out is implemented with a vertical orientation for
+portrait mode-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-
+        <!--Constraint layout is used for the banner and the banner text to overlap-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.82">
+            <!--This is the banner-->
             <ImageView
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
@@ -19,36 +21,38 @@
                 android:scaleType="fitXY"
                 android:tint="#88333333">
             </ImageView>
-
+            <!--This is the banner_text-->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_banner_text"
                 android:scaleType="fitXY">
             </ImageView>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <!--The red divider.-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.18"
             android:background="@color/red">
         </LinearLayout>
-
+        <!--This is set as a linear layout for the two sets of imagebuttons
+        are placed equally and properly vertically next to each other-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="@color/black"
             android:orientation="vertical">
-
+            <!--It is set to linear lay out for the image buttons (cs and design)
+            to be horizontally placed right next
+            to each other-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal">
-
+                <!--This is the cs ImageButton-->
                 <ImageButton
                     android:id="@+id/tile_cs"
                     android:layout_width="wrap_content"
@@ -58,7 +62,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/img_tile_cs"
                     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"></ImageButton>
-
+                <!--This is the design ImageButton-->
                 <ImageButton
                     android:id="@+id/tile_design"
                     android:layout_width="wrap_content"
@@ -69,13 +73,16 @@
                     android:src="@drawable/img_tile_design"
                     tools:ignore="SpeakableTextPresentCheck"></ImageButton>
             </LinearLayout>
-
+            <!--This is the bottom section of the home section of the application.
+             It is set to linear lay out for the image buttons (se
+             and math)to be horizontally placed right next
+             to each other-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal">
-
+                <!--This is the math ImageButton-->
                 <ImageButton
                     android:id="@+id/tile_math"
                     android:layout_width="wrap_content"
@@ -85,7 +92,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/img_tile_math"
                     tools:ignore="SpeakableTextPresentCheck"></ImageButton>
-
+                <!--This is the se ImageButton-->
                 <ImageButton
                     android:id="@+id/tile_se"
                     android:layout_width="wrap_content"
@@ -97,6 +104,4 @@
                     tools:ignore="SpeakableTextPresentCheck"></ImageButton>
             </LinearLayout>
         </LinearLayout>
-
-
 </LinearLayout>

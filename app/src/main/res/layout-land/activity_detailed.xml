@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--A linear lay out with a horizontal orientation is implement-->
+<!--This is to put the view groups right next to each other in landscape mode-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
-
         <!--A linear layout for the banner and the red divider
             to appear vertically on landscape-->
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -11,7 +12,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
-
         <!--Putting the text image over the banner image using a
         constraint layout-->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,15 +19,14 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.82"
                 android:background="@color/dark_yellow">
+                <!--An empty Imageview. Image will be added when a an image button is pressed-->
                 <ImageView
                     android:id="@+id/detail_banner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop">
                 </ImageView>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
             <!--This is the red rectangle divider-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,16 +36,15 @@
                 android:layout_gravity="bottom"
                 android:layout_weight="0.2">
             </LinearLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
+        <!--A new linear lay out is implemented to vertically display the text and the content-->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
             android:orientation="vertical">
-
+            <!--This is the title-->
             <TextView
                 android:id="@+id/content_title_id"
                 android:layout_width="match_parent"
@@ -56,13 +54,15 @@
                 android:text="@string/title_placeholder"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 ></TextView>
-
+            <!--This is the detail content-->
             <TextView
                 android:id="@+id/detail_content_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="25dp"
+                android:justificationMode="inter_word"
                 android:text="@string/content_placeholder"
+                android:textSize="16dp"
                 android:textColor="#6a6a6a"></TextView>
         </LinearLayout>
 
